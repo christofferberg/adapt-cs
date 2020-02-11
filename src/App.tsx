@@ -1,33 +1,17 @@
 import React, { FC } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-// Data
-import { fines } from 'fines'
-
-// Components
-import { Flex, Box, Stack, Heading, Text } from '@chakra-ui/core'
-import { SpringFadeUp } from 'components/Animations'
-import { Fine } from 'components/Fine'
-import { NoobToast } from 'components/NoobToast'
+// Pages
+import { Home } from 'pages/Home'
+import { Rank } from 'pages/Rank'
 
 const App: FC = () => (
-  <Flex bg="gray.50">
-    <Box maxW="containers.lg" w="full" mx="auto" my={[16, null, 12]} p={6}>
-      <NoobToast />
-
-      <Box mb={8}>
-        <Heading fontSize="2xl">Alle bøder skal indbetales til MobilePay “box20218”</Heading>
-        <Text>Og betales senest 24 timer efter bøden er uddelt.</Text>
-      </Box>
-
-      <Stack spacing={6}>
-        {fines.map(({ desc, price }, index) => (
-          <SpringFadeUp key={index}>
-            <Fine desc={desc} price={price} />
-          </SpringFadeUp>
-        ))}
-      </Stack>
-    </Box>
-  </Flex>
+  <Router>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/rank" component={Rank} />
+    </Switch>
+  </Router>
 )
 
 export default App
