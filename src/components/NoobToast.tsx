@@ -11,7 +11,7 @@ const noobs = [
   'Homann har krampe i tændstiksfingeren...',
   'Jeff er en noob, men vild med Scout!',
   'Emil udtaler bananen på engelsk',
-  'QA-sper har brug for en god forsikirng!',
+  'QA-sper har brug for en god forsikring!',
   'QA-sper er en lort!',
   'QA-sper har ny hårfarve hver kamp!',
   'QA-sper er den lavestlønnede Boi!',
