@@ -18,7 +18,7 @@ export const AppLayout: FC = ({ ...children }) => {
         minH="100vh"
         h={[null, null, '100vh']}
         wrap="wrap"
-        direction={[null, null, 'row-reverse']}
+        direction={['column', null, 'row-reverse']}
         overflow="hidden"
       >
         <Box
@@ -32,7 +32,7 @@ export const AppLayout: FC = ({ ...children }) => {
           <h2>Hello</h2>
         </Box>
 
-        <Box h="100%" w={['100%', null, '60%', '50%']} bg="#f7f7f9" overflow="scroll">
+        <Box flex="1" h="100%" w={['100%', null, '60%', '50%']} bg="#f7f7f9" overflow="scroll">
           <Header />
           <Flex as="main" flex="1" {...children} />
           <Footer />
