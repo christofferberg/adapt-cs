@@ -44,7 +44,7 @@ export const NoobToast = () => {
           description: getRandom(noobs),
           // @ts-ignore
           status: getRandom(statuses),
-          duration: 2000,
+          duration: 3000,
           isClosable: false,
         })
       }}
