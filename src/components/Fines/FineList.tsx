@@ -11,9 +11,9 @@ import { FineItem } from 'components/Fines/FineItem'
 export const FineList: FC = () => {
   return (
     <Stack w="full" spacing={6}>
-      {finesData.map(({ title, desc, price }, index) => (
+      {finesData.map(({ title, icon, desc, price }, index) => (
         <SpringFadeUp key={index}>
-          <FineItem title={title} desc={desc} price={price} />
+          <FineItem title={title} icon={icon} desc={desc} price={price} />
         </SpringFadeUp>
       ))}
     </Stack>
