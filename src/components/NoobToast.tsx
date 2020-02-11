@@ -12,29 +12,31 @@ const noobs = [
 ]
 
 const positions = ['top', 'top-left', 'bottom', 'bottom-left', 'bottom-right']
+const statuses = ['success', 'error', 'warning', 'info']
 
-const getRandomNoob = () => noobs[Math.floor(Math.random() * noobs.length)]
-const getRandomPosition = () => positions[Math.floor(Math.random() * positions.length)]
+const getRandom = (array: any) => array[Math.floor(Math.random() * array.length)]
 
 export const NoobToast = () => {
   const toast = useToast()
+
   return (
     <Button
       zIndex={2}
       pos="absolute"
       top="4"
       right="4"
-      onClick={() =>
-        toast({
+      onClick={() => {
+        return toast({
           // @ts-ignore
-          position: getRandomPosition(),
+          position: getRandom(positions),
           title: 'Hvem er noob?',
-          description: getRandomNoob(),
-          status: 'error',
+          description: getRandom(noobs),
+          // @ts-ignore
+          status: getRandom(statuses),
           duration: 2000,
           isClosable: false,
         })
-      }
+      }}
     >
       Hvem er noob?
     </Button>
