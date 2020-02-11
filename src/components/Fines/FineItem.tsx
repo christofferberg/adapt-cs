@@ -14,7 +14,8 @@ export const FineItem: FC<FineProps> = ({ title = 'Missing title', icon, desc, p
   return (
     <Box bg="white" p={5} shadow="md" borderRadius="sm">
       <Heading mb={1} fontSize={['xl', null, null, '2xl']} display="flex" alignItems="center">
-        {title} {icon && <Box as={icon} ml={2} display="inline-block" />}
+        {title}
+        {icon && <Box as={icon} ml={2} display="inline-block" />}
       </Heading>
 
       <Text>{desc}</Text>

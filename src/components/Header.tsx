@@ -5,16 +5,19 @@ import { Link as ReactLink } from 'react-router-dom'
 // Components
 import { Badge, Box, Link, Stack } from '@chakra-ui/core'
 import { Inner } from 'components/Inner'
+import { SpringScaleIn } from 'components/Animations'
 
 export const Header: FC = () => {
   return (
-    <Box as="header" py={6} mb={10}>
+    <Box as="header" py={6} mb={[4, null, 10]}>
       <Inner isCentered>
-        <Link as={ReactLink} to="/">
-          <Badge fontSize="xl" variantColor="teal" variant="solid">
-            Adapt CS
-          </Badge>
-        </Link>
+        <SpringScaleIn>
+          <Link as={ReactLink} to="/">
+            <Badge fontSize="xl" variantColor="teal" variant="solid">
+              Adapt CS
+            </Badge>
+          </Link>
+        </SpringScaleIn>
 
         <Stack as="nav" isInline spacing={4} ml="auto">
           <Link as={ReactLink} to="/" fontWeight="500">

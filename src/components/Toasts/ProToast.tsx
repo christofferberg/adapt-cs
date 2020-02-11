@@ -3,9 +3,6 @@ import React from 'react'
 // Utils
 import { getRandomArrayItem } from 'utils/getRandomArrayItem'
 
-// Constants
-import { toastPositions } from 'constants/index'
-
 // Components
 import { useToast, Button } from '@chakra-ui/core'
 
@@ -29,7 +26,6 @@ export const ProToast = ({ ...props }) => {
       variantColor="green"
       onClick={() => {
         return toast({
-          position: getRandomArrayItem(toastPositions),
           title: 'Hvem er pro?',
           description: getRandomArrayItem(descriptions),
           status: 'success',
