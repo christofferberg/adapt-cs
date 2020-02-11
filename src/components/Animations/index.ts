@@ -1,0 +1,1 @@
+export { SpringFadeUp } from './SpringFadeUp'
